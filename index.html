@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for things Tailwind is too verbose for */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+<div class="bg-[#F6F7F9] text-[#777] text-[11px] py-2 border-b hidden md:block">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <p class="font-semibold uppercase tracking-tight">Free Returns. Standard Shipping Orders RS 5000+</p>
+        <div class="flex space-x-4 items-center uppercase">
+            <div class="flex space-x-3 border-r pr-4">
+                <a href="#" class="hover:text-[#1e73be] transition-colors">My Account</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">About Us</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Blog</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">My Wishlist</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Cart</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Log In</a>
+            </div>
+          
+            <div class="flex space-x-3 text-sm">
+                <i class="fab fa-facebook-f hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-twitter hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-instagram hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-whatsapp hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-youtube hover:text-[#1e73be] cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="bg-[#F6F7F9] py-5">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3 flex-shrink-0">
+          
+            <div>
+               <img src="images/logo.png" alt="Logo" class="h-8 w-auto">
+            </div>
+        </div>
+
+        <div class="hidden lg:flex flex-grow max-w-2xl mx-10">
+            <div class="flex w-full border-1 border-[#eeeeee] rounded-full overflow-hidden">
+                <input type="text" placeholder="Search..." class="w-full px-5 py-2.5 outline-none text-sm">
+                <div class="flex items-center px-4 border-l border-r text-gray-500 text-xs w-40 bg-white cursor-pointer hover:bg-gray-50">
+                    All Categories <i class="fas fa-chevron-down ml-2 text-[8px]"></i>
+                </div>
+                <button class="bg-white px-4 text-[#222529] hover:text-[#1e73be]">
+                    <i class="fas fa-search text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-5">
+            <div class="hidden xl:flex items-center space-x-3 mr-2">
+                <i class="fas fa-phone text-3xl text-[#222529]"></i>
+                <div class="leading-none">
+                    <p class="text-[10px] text-gray-400 font-bold mb-1">CALL US NOW</p>
+                    <p class="text-lg font-bold text-[#222529] tracking-tight">+977 9865479949</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5 text-2xl text-[#222529]">
+                <i class="far fa-user cursor-pointer hover:text-[#1e73be]"></i>
+                <i class="far fa-heart cursor-pointer hover:text-[#1e73be]"></i>
+                <div class="relative cursor-pointer hover:text-[#1e73be]">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-1 -right-2 bg-[#1e73be] text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold">3</span>
+                </div>
+                <button id="menu-btn" class="lg:hidden text-2xl ml-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="bg-[#1e73be] text-white hidden lg:block">
+    <div class="container mx-auto px-4 flex justify-between items-center font-bold text-[13px]">
+        <ul class="flex">
+            <li class="bg-[#0a549d] px-5 py-4 cursor-pointer">HOME</li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">CATEGORIES <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">PRODUCTS <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">PAGES <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">BLOG</li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">ELEMENTS <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">CONTACT US</li>
+        </ul>
+        <div class="flex space-x-6 tracking-wide">
+            <a href="#" class="hover:text-yellow-400">SPECIAL OFFER!</a>
+            <a href="#" class="hover:text-yellow-400">BUY PORTO!</a>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden lg:hidden">
+    <div class="bg-[#222529] w-72 h-full p-6 text-white transform -translate-x-full transition-transform duration-300 ease-in-out" id="mobile-sidebar">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-bold">MENU</span>
+            <button id="close-menu" class="text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4 text-sm font-semibold">
+            <li class="border-b border-gray-700 pb-2"><a href="#">HOME</a></li>
+            <li class="border-b border-gray-700 pb-2 flex justify-between">CATEGORIES <i class="fas fa-chevron-right text-xs"></i></li>
+            <li class="border-b border-gray-700 pb-2 flex justify-between">PRODUCTS <i class="fas fa-chevron-right text-xs"></i></li>
+            <li class="border-b border-gray-700 pb-2"><a href="#">BLOG</a></li>
+            <li class="border-b border-gray-700 pb-2"><a href="#">CONTACT US</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="bg-[#F6F7F9] border-b hidden lg:block">
+    <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-truck text-4xl text-[#222529]"></i>
+            <div>
+                <h4 class="font-bold text-sm text-[#222529]">FREE SHIPPING & RETURN</h4>
+                <p class="text-xs text-gray-500">Free shipping on all orders over $99</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4 border-l-0 md:border-l px-0 md:px-8">
+            <i class="far fa-money-bill-alt text-4xl text-[#222529]"></i>
+            <div>
+                <h4 class="font-bold text-sm text-[#222529]">MONEY BACK GUARANTEE</h4>
+                <p class="text-xs text-gray-500">100% money back guarantee</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4 border-l-0 md:border-l px-0 md:px-8">
+            <i class="far fa-clock text-4xl text-[#222529]"></i>
+            <div>
+                <h4 class="font-bold text-sm text-[#222529]">ONLINE SUPPORT 24/7</h4>
+                <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="relative bg-gray-100 rounded-lg overflow-hidden flex flex-col md:flex-row items-center h-auto md:h-[400px] shadow-sm">
+            <div class="p-8 md:p-16 z-10 w-full md:w-1/2">
+                <p class="text-gray-600 mb-2 italic text-lg">Find the Boundaries. Push Through!</p>
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Home Appliance<br><span class="text-2xl md:text-4xl font-normal">UP TO</span> 50% OFF</h2>
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="text-gray-500">STARTING AT</span>
+                    <span class="bg-red-500 text-white font-bold px-3 py-1 rounded text-xl">Rs 20000</span>
+                </div>
+                <button class="bg-gray-900 text-white px-8 py-3 font-semibold hover:bg-blue-600 transition-colors duration-300 rounded shadow-lg">SHOP NOW!</button>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-full bg-transparent">
+                 <img src="images/banner.png" alt="Hero Model" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border rounded p-4 text-center group">
+            <h3 class="font-bold mb-4">FEATURED PRODUCTS</h3>
+            <div class="relative overflow-hidden mb-4 h-48 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Shoes" class="max-h-full group-hover:scale-110 transition-transform duration-500">
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-black"><i class="fas fa-chevron-left"></i></button>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-black"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <p class="text-xs text-gray-500">CATEGORY</p>
+            <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer">Red Men Shoes</h4>
+            <div class="text-yellow-400 text-xs mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="space-x-2"><span class="text-gray-400 line-through text-sm">$59.00</span><span class="font-bold">$49.00</span></div>
+        </div>
+        <div class="border rounded p-4 text-center group">
+            <h3 class="font-bold mb-4">BEST SELLERS</h3>
+            <div class="relative overflow-hidden mb-4 h-48 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cap" class="max-h-full group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <p class="text-xs text-gray-500">CATEGORY</p>
+            <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer">Grey Men Sports Cap</h4>
+            <div class="text-yellow-400 text-xs mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="space-x-2"><span class="text-gray-400 line-through text-sm">$59.00</span><span class="font-bold">$49.00</span></div>
+        </div>
+        <div class="border rounded p-4 text-center group">
+            <h3 class="font-bold mb-4">NEW ARRIVALS</h3>
+            <div class="relative overflow-hidden mb-4 h-48 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Belt" class="max-h-full group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <p class="text-xs text-gray-500">CATEGORY</p>
+            <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer">Black Men Casual Belt</h4>
+            <div class="text-yellow-400 text-xs mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="space-x-2"><span class="text-gray-400 line-through text-sm">$59.00</span><span class="font-bold">$49.00</span></div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 flex items-center justify-between p-6 rounded shadow-sm hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="font-bold text-lg">Porto Watches</h3>
+                <p class="text-2xl font-bold text-blue-600 mb-2">20% <span class="text-black">30% OFF</span></p>
+                <button class="bg-gray-900 text-white px-4 py-1 text-sm hover:bg-blue-600 transition-colors">SHOP NOW</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Watch" class="w-24 h-24 object-cover rounded-full">
+        </div>
+        <div class="bg-gray-100 flex items-center justify-between p-6 rounded border-2 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+            <div class="text-center w-full">
+                <h3 class="font-bold text-lg">DEAL PROMOS</h3>
+                <p class="text-gray-600 mb-2 text-sm">STARTING AT $99</p>
+                <button class="bg-gray-900 text-white px-4 py-1 text-sm hover:bg-blue-600 transition-colors">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="bg-pink-50 flex items-center justify-between p-6 rounded shadow-sm hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="font-bold text-lg">Handbags</h3>
+                <p class="text-red-500 font-bold mb-2 text-sm">STARTING AT $99</p>
+                <button class="bg-gray-900 text-white px-4 py-1 text-sm hover:bg-blue-600 transition-colors">SHOP NOW</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Bag" class="w-24 h-24 object-cover rounded-full">
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-2 right-2 text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full p-1 shadow"><i class="far fa-heart"></i></div>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Brown Men Casual Belt</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1559582798-678dfc71cee4?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-2 right-2 text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full p-1 shadow"><i class="far fa-heart"></i></div>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Black Men Casual Belt</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-2 right-2 text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full p-1 shadow"><i class="far fa-heart"></i></div>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Red Men Shoes</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$45.00</span></div>
+            </div>
+
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-2 right-2 text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full p-1 shadow"><i class="far fa-heart"></i></div>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Brown Bag</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="absolute top-2 left-2 z-10">
+                    <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
+                </div>
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-2 right-2 text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full p-1 shadow"><i class="far fa-heart"></i></div>
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Black Women Shoes</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+            
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Blue Sports Clothes</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Blue Spring Casual Shoes</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Grey Men Sports Cap</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$40.00</span></div>
+            </div>
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                 <div class="absolute top-2 left-2 z-10 flex flex-col gap-1">
+                    <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
+                    <span class="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">-20%</span>
+                </div>
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Men Black Jacket</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+            <div class="group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg p-3 rounded bg-white">
+                <div class="bg-gray-100 h-48 w-full flex items-center justify-center mb-3 relative overflow-hidden rounded">
+                    <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <p class="text-[10px] text-gray-500 uppercase">Category</p>
+                <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate">Porto Brown Bag</h4>
+                <div class="text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="space-x-1"><span class="text-gray-400 line-through text-xs">$59.00</span><span class="font-bold text-sm">$49.00</span></div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="bg-gray-900 text-white px-8 py-3 font-semibold hover:bg-blue-600 transition-colors duration-300 rounded">LOAD MORE...</button>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-[#184a8c] text-white p-6 md:p-8 rounded flex flex-col md:flex-row justify-between items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-blend-mode: overlay;">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <span class="bg-gray-900 text-white font-bold text-xl md:text-2xl px-4 py-2">BIG SALE</span>
+                <h3 class="text-lg md:text-2xl font-bold">ALL NEW FASHION BRANDS ITEMS UP TO 70% OFF</h3>
+                <span class="text-sm hidden lg:block italic">Online Purchases Only</span>
+            </div>
+            <button class="bg-white text-gray-900 font-bold px-6 py-3 hover:bg-blue-600 hover:text-white transition-colors duration-300 rounded">VIEW SALE</button>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center border-b">
+        <div class="group cursor-default">
+            <div class="bg-gray-900 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:-translate-y-2 transition-transform duration-300">
+                <i class="fas fa-headphones"></i>
+            </div>
+            <h4 class="font-bold mb-2">CUSTOMER SUPPORT</h4>
+            <p class="text-gray-500 text-sm mb-4">Need Assistance?</p>
+            <p class="text-gray-500 text-sm leading-relaxed">We really care about you and your website as much as you do. Purchasing Porto or any other theme from us you get 100% free support.</p>
+        </div>
+        <div class="group cursor-default">
+            <div class="bg-gray-900 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:-translate-y-2 transition-transform duration-300">
+                <i class="far fa-credit-card"></i>
+            </div>
+            <h4 class="font-bold mb-2">SECURED PAYMENT</h4>
+            <p class="text-gray-500 text-sm mb-4">Safe & Fast</p>
+            <p class="text-gray-500 text-sm leading-relaxed">With Porto you can customize the layout, colors and styles within only a few minutes. Start creating an amazing website right now!</p>
+        </div>
+        <div class="group cursor-default">
+            <div class="bg-gray-900 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:-translate-y-2 transition-transform duration-300">
+                <i class="fas fa-undo"></i>
+            </div>
+            <h4 class="font-bold mb-2">RETURNS</h4>
+            <p class="text-gray-500 text-sm mb-4">Easy & Free</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Porto has very powerful admin features to help customer to build their own shop in minutes without any special skills in web development.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12 flex justify-between items-center space-x-6 overflow-x-auto hide-scrollbar opacity-60">
+        <h2 class="text-2xl font-bold uppercase tracking-widest min-w-[120px]">DAVID SMITH</h2>
+        <h2 class="text-xl font-bold uppercase tracking-widest flex items-center min-w-[120px]"><span class="bg-gray-900 text-white px-2 mr-1">RJ</span> RON JONES</h2>
+        <h2 class="text-xl font-bold uppercase tracking-widest min-w-[120px]">GOLDENGRID.</h2>
+        <h2 class="text-xl font-bold uppercase tracking-widest flex flex-col leading-none min-w-[120px]"><span>CLIMB</span><span>THE</span><span>MOUNTAIN</span></h2>
+        <h2 class="text-2xl font-serif uppercase min-w-[120px]">GOLDEN</h2>
+        <h2 class="text-2xl font-bold lowercase min-w-[120px]">avant garde</h2>
+    </div>
+
+    <footer class="bg-[#F6F7F9] pt-16 pb-8 border-t">
+       <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <div class="lg:col-span-1">
+                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">CONTACT INFO</h4>
+                <div class="text-sm space-y-4">
+                    <p><strong class="text-gray-700 block text-xs">ADDRESS:</strong>Kupondole, Lalitpur, Nepal</p>
+                    <p><strong class="text-gray-700 block text-xs">PHONE:</strong>01-5423384, 01-5268961, 9865479949,
+9741661800, 9805950020, 981-8776832</p>
+                    <p><strong class="text-gray-700 block text-xs">EMAIL:</strong><a href="mailto:electroref.tech@gmail.com" class="hover:text-blue-600">electroref.tech@gmail.com</a></p>
+                    <p><strong class="text-gray-700 block text-xs">WORKING DAYS/HOURS:</strong>Sun - Sat: 9:00 am- 7:00pm</p>
+                </div>
+                <div class="flex space-x-2 mt-6">
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-twitter text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-youtube text-xs"></i></a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">SUBSCRIBE NEWSLETTER</h4>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <p class="text-sm max-w-xs">Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
+                    <form class="flex w-full md:max-w-md">
+                        <input type="email" placeholder="Email Address" class="w-full px-6 py-3 bg-white border-none outline-none rounded-l-full text-sm">
+                        <button class="bg-[#1e73be] text-white px-8 py-3 font-bold text-xs tracking-widest hover:bg-blue-700 transition-colors rounded-r-full">SUBSCRIBE</button>
+                    </form>
+                </div>
+                   <hr class="border-gray-200 my-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">CUSTOMER SERVICE</h4>
+                <div class="grid grid-cols-2 gap-2">
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">My Account</a></li>
+                    </ul>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Orders History</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Advanced Search</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">ABOUT US</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Super Fast Html Template</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">1st Fully working Ajax Theme</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">33 Unique Shop Layouts</a></li>
+                    </ul>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Powerful Admin Panel</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Mobile & Retina Optimized</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+     
+
+        <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-wider">
+            <p>Copyright © 2017-2025 ACGHAR.COM. All Rights Reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="fixed bottom-4 right-4 bg-[#4e4e4e] text-white w-10 h-10 flex items-center justify-center hover:bg-gray-700 transition-colors">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    </footer>
+
+   
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileSidebar.classList.remove('-translate-x-full'), 10);
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileSidebar.classList.add('-translate-x-full');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    });
+
+    // Close on overlay click
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu.click();
+    });
+</script>
+</body>
+</html>
