@@ -10,6 +10,22 @@
         /* Custom styles for things Tailwind is too verbose for */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+   
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+    }
+    /* Pause on hover for better UX */
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased overflow-x-hidden">
@@ -871,14 +887,37 @@
         </div>
     </div>
 
-    <div class="container mx-auto px-4 py-12 flex justify-between items-center space-x-6 overflow-x-auto hide-scrollbar opacity-60">
-        <h2 class="text-2xl font-bold uppercase tracking-widest min-w-[120px]">DAVID SMITH</h2>
-        <h2 class="text-xl font-bold uppercase tracking-widest flex items-center min-w-[120px]"><span class="bg-gray-900 text-white px-2 mr-1">RJ</span> RON JONES</h2>
-        <h2 class="text-xl font-bold uppercase tracking-widest min-w-[120px]">GOLDENGRID.</h2>
-        <h2 class="text-xl font-bold uppercase tracking-widest flex flex-col leading-none min-w-[120px]"><span>CLIMB</span><span>THE</span><span>MOUNTAIN</span></h2>
-        <h2 class="text-2xl font-serif uppercase min-w-[120px]">GOLDEN</h2>
-        <h2 class="text-2xl font-bold lowercase min-w-[120px]">avant garde</h2>
+
+
+<div class="container mx-auto px-4 py-4">
+    <div class="overflow-hidden relative">
+        <div class="animate-marquee items-center space-x-16 opacity-100 hover:opacity-90 transition-opacity duration-500">
+            
+            
+
+            <div class="flex items-center space-x-8">
+                <img src="images/brand1.jpg" alt="brand" >
+                <img src="images/brand2.jpg" alt="brand" >
+                <img src="images/brand3.jpg" alt="brand" >
+                <img src="images/brand4.jpg" alt="brand" >
+                <img src="images/brand5.jpg" alt="brand" >
+                <img src="images/brand6.jpg" alt="brand" >
+                <img src="images/brand1.jpg" alt="brand" >
+                <img src="images/brand2.jpg" alt="brand" >
+                <img src="images/brand3.jpg" alt="brand" >
+                <img src="images/brand4.jpg" alt="brand" >
+                <img src="images/brand5.jpg" alt="brand" >
+                <img src="images/brand6.jpg" alt="brand" >
+            </div>
+            
+             
+            
+        </div>
+
+        <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
     </div>
+</div>
 
     <footer class="bg-[#F6F7F9] pt-16 pb-8 border-t">
        <div class="container mx-auto px-4">
