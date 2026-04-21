@@ -26,6 +26,9 @@
         animation-play-state: paused;
     }
 
+    
+    
+
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased overflow-x-hidden">
@@ -85,7 +88,7 @@
             </div>
             <div class="flex items-center space-x-5 text-2xl text-[#222529]">
                 <i class="far fa-user cursor-pointer hover:text-[#1e73be]"></i>
-                <i class="far fa-heart cursor-pointer hover:text-[#1e73be]"></i>
+                <i class="far fa-bookmark cursor-pointer hover:text-[#1e73be]"></i>
                 <div class="relative cursor-pointer hover:text-[#1e73be]">
                     <i class="fas fa-shopping-bag"></i>
                     <span class="absolute -top-1 -right-2 bg-[#1e73be] text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold">3</span>
@@ -157,6 +160,76 @@
         </div>
     </div>
 </div>
+
+
+<section class="container mx-auto px-4 py-12">
+    <div class="relative bg-[#222529] rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center">
+        
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#1e73be] -skew-x-12 translate-x-24 hidden lg:block"></div>
+
+        <div class="relative z-10 w-full lg:w-1/2 p-8 md:p-16 text-center lg:text-left">
+            <div class="inline-flex items-center space-x-2 bg-[#1e73be] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-6 animate-pulse">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                <span>Limited Time Offer</span>
+            </div>
+
+            <h2 class="text-white text-4xl md:text-6xl font-black leading-none mb-4 tracking-tighter">
+                BLACK FRIDAY <br>
+                <span class="text-[#1e73be]">MEGA SALE</span>
+            </h2>
+            
+            <p class="text-gray-400 text-lg md:text-xl mb-8 font-light">
+                Get up to <span class="text-white font-bold text-3xl">70% OFF</span> on all <br class="hidden md:block"> premium electronic appliances.
+            </p>
+
+            <div class="flex justify-center lg:justify-start space-x-4 mb-10">
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-lg border border-white/20">
+                        <span class="text-xl md:text-2xl font-bold">02</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400 uppercase mt-2 block font-bold">Days</span>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-lg border border-white/20">
+                        <span class="text-xl md:text-2xl font-bold">14</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400 uppercase mt-2 block font-bold">Hrs</span>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md text-white w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-lg border border-white/20">
+                        <span class="text-xl md:text-2xl font-bold">35</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400 uppercase mt-2 block font-bold">Min</span>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 backdrop-blur-md text-[#1e73be] w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-lg border border-white/20">
+                        <span class="text-xl md:text-2xl font-bold">42</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400 uppercase mt-2 block font-bold">Sec</span>
+                </div>
+            </div>
+
+            <a href="#" class="inline-block bg-white text-[#222529] hover:bg-[#1e73be] hover:text-white px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+        <div class="relative z-10 w-full lg:w-1/2 flex justify-center items-center p-12">
+            <div class="absolute top-10 right-10 bg-yellow-400 text-[#222529] w-20 h-20 rounded-full flex flex-col items-center justify-center font-black leading-tight shadow-lg transform rotate-12 z-20">
+                <span class="text-xl">70%</span>
+                <span class="text-[10px] uppercase">OFF</span>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800" 
+                 alt="Featured Product" 
+                 class="w-full max-w-md object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] transform -rotate-3 hover:rotate-0 transition-transform duration-700">
+        </div>
+
+    </div>
+</section>
 
 
 
@@ -388,7 +461,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -397,7 +470,7 @@
     </div> 
 
     <div class="px-2 pb-2"> 
-        <h4 class="font-semibold text-sm mb-1 hover:text-blue-600 cursor-pointer truncate text-gray-800">Brown Men Casual Belt</h4>
+        <h4 class="font-normal line-clamp-2 text-sm mb-1 hover:text-blue-400 cursor-pointer text-gray-800">Brown Men Casual BeltBrown Men Casual BeltBrown Men Casual Belt</h4>
         <div class="space-x-1">
             <span class="text-gray-400 line-through text-xs">Rs 75000</span>
             <span class="font-bold text-sm text-[#222529]">Rs 50000</span>
@@ -415,7 +488,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -440,7 +513,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -464,7 +537,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -493,7 +566,7 @@
                     <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
 <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -520,7 +593,7 @@
                     <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
 <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -558,7 +631,7 @@
                     <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
                      <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -576,7 +649,7 @@
 <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">        
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -600,7 +673,7 @@
         
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -622,7 +695,7 @@
                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
                      <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -642,7 +715,7 @@
 <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">        
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -667,7 +740,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -694,7 +767,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -719,7 +792,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -743,7 +816,7 @@
 <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
         <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -767,7 +840,7 @@
     <div class="bg-transparent h-48 w-full flex mb-3 relative overflow-hidden rounded">
 <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">        <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -794,7 +867,7 @@
                     <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
 <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -821,7 +894,7 @@
                     <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&w=300&q=80" alt="Product" class="max-h-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500 cursor-pointer">
 <div class="absolute top-2 right-2 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-gray-400 hover:text-red-500 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Add to Wishlist">
-                <i class="far fa-heart text-xs"></i>
+                <i class="far fa-bookmark text-xs"></i>
             </div>
             <div class="text-gray-400 hover:text-blue-600 cursor-pointer bg-white rounded-full w-7 h-7 flex items-center justify-center shadow-md border border-gray-100" title="Compare">
                 <i class="fas fa-random text-[10px]"></i>
@@ -848,6 +921,126 @@
         </div>
     </div>
     </section>
+
+     <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-[#222529] uppercase tracking-tight">Our Professional Services</h2>
+            <div class="h-1 w-20 bg-[#1e73be] mx-auto mt-4"></div>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                We provide top-tier cooling and electrical solutions tailored to your home and office needs.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    
+    <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="relative h-56 overflow-hidden">
+            <a href="#" class="block w-full h-full relative z-10">
+                <img 
+                    src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    alt="AC Installation" 
+                    class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src='https://placehold.co/800x600/1e73be/white?text=AC+Installation'"
+                >
+                <div class="absolute inset-0 bg-[#1e73be]/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                <div class="absolute bottom-4 left-4 bg-[#1e73be] text-white p-3 rounded-lg shadow-lg">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+            </a>
+        </div>
+        <div class="p-4">
+            <a href="#" class="text-lg font-bold text-[#222529] mb-2 block group-hover:text-[#1e73be] transition-colors">Expert AC Installation</a>
+            <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                Professional setup of split and central AC systems ensuring maximum energy efficiency and cooling performance.
+            </p>
+            <a href="#" class="text-[#1e73be] font-bold text-xs uppercase tracking-widest flex items-center hover:underline">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="relative h-56 overflow-hidden">
+            <a href="#" class="block w-full h-full relative z-10">
+                <img 
+                    src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    alt="Maintenance" 
+                    class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src='https://placehold.co/800x600/1e73be/white?text=Maintenance'"
+                >
+                <div class="absolute inset-0 bg-[#1e73be]/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                <div class="absolute bottom-4 left-4 bg-[#1e73be] text-white p-3 rounded-lg shadow-lg">
+                    <i class="fas fa-snowflake text-xl"></i>
+                </div>
+            </a>
+        </div>
+        <div class="p-4">
+            <a href="#" class="text-lg font-bold text-[#222529] mb-2 block group-hover:text-[#1e73be] transition-colors">Seasonal Maintenance</a>
+            <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                Regular filter cleaning and gas pressure checks to prevent unexpected breakdowns and extend unit lifespan.
+            </p>
+            <a href="#" class="text-[#1e73be] font-bold text-xs uppercase tracking-widest flex items-center hover:underline">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="relative h-56 overflow-hidden">
+            <a href="#" class="block w-full h-full relative z-10">
+                <img 
+                    src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    alt="Repair Services" 
+                    class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src='https://placehold.co/800x600/1e73be/white?text=Repair+Services'"
+                >
+                <div class="absolute inset-0 bg-[#1e73be]/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                <div class="absolute bottom-4 left-4 bg-[#1e73be] text-white p-3 rounded-lg shadow-lg">
+                    <i class="fas fa-bolt text-xl"></i>
+                </div>
+            </a>
+        </div>
+        <div class="p-4">
+            <a href="#" class="text-lg font-bold text-[#222529] mb-2 block group-hover:text-[#1e73be] transition-colors">Emergency Repair</a>
+            <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                Our technicians are available round the clock to fix electrical faults and mechanical failures immediately.
+            </p>
+            <a href="#" class="text-[#1e73be] font-bold text-xs uppercase tracking-widest flex items-center hover:underline">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="relative h-56 overflow-hidden">
+            <a href="#" class="block w-full h-full relative z-10">
+                <img 
+                    src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    alt="Duct Cleaning" 
+                    class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src='https://placehold.co/800x600/1e73be/white?text=Duct+Cleaning'"
+                >
+                <div class="absolute inset-0 bg-[#1e73be]/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                <div class="absolute bottom-4 left-4 bg-[#1e73be] text-white p-3 rounded-lg shadow-lg">
+                    <i class="fas fa-wind text-xl"></i>
+                </div>
+            </a>
+        </div>
+        <div class="p-4">
+            <a href="#" class="text-lg font-bold text-[#222529] mb-2 block group-hover:text-[#1e73be] transition-colors">Air Duct Cleaning</a>
+            <p class="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                Improve your indoor air quality by removing dust, allergens, and debris from your ventilation system.
+            </p>
+            <a href="#" class="text-[#1e73be] font-bold text-xs uppercase tracking-widest flex items-center hover:underline">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+    </div>
+</section>
 
     <div class="container mx-auto px-4 py-8">
         <div class="bg-[#184a8c] text-white p-6 md:p-8 rounded flex flex-col md:flex-row justify-between items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-blend-mode: overlay;">
@@ -888,6 +1081,7 @@
     </div>
 
 
+  
 
 <div class="container mx-auto px-4 py-4">
     <div class="overflow-hidden relative">
@@ -919,66 +1113,66 @@
     </div>
 </div>
 
-    <footer class="bg-[#F6F7F9] pt-16 pb-8 border-t">
+    <footer class="bg-[#1b8dcc] pt-16 pb-8 border-t">
        <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
             <div class="lg:col-span-1">
-                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">CONTACT INFO</h4>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">CONTACT INFO</h4>
                 <div class="text-sm space-y-4">
-                    <p><strong class="text-gray-700 block text-xs">ADDRESS:</strong>Kupondole, Lalitpur, Nepal</p>
-                    <p><strong class="text-gray-700 block text-xs">PHONE:</strong>01-5423384, 01-5268961, 9865479949,
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">ADDRESS:</strong>Kupondole, Lalitpur, Nepal</p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">PHONE:</strong>01-5423384, 01-5268961, 9865479949,
 9741661800, 9805950020, 981-8776832</p>
-                    <p><strong class="text-gray-700 block text-xs">EMAIL:</strong><a href="mailto:electroref.tech@gmail.com" class="hover:text-blue-600">electroref.tech@gmail.com</a></p>
-                    <p><strong class="text-gray-700 block text-xs">WORKING DAYS/HOURS:</strong>Sun - Sat: 9:00 am- 7:00pm</p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">EMAIL:</strong><a href="mailto:electroref.tech@gmail.com" class="hover:text-blue-600">electroref.tech@gmail.com</a></p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">WORKING DAYS/HOURS:</strong>Sun - Sat: 9:00 am- 7:00pm</p>
                 </div>
                 <div class="flex space-x-2 mt-6">
-                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-twitter text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all"><i class="fab fa-youtube text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-twitter text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-youtube text-xs"></i></a>
                 </div>
             </div>
 
             <div class="lg:col-span-2">
-                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">SUBSCRIBE NEWSLETTER</h4>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">SUBSCRIBE NEWSLETTER</h4>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <p class="text-sm max-w-xs">Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
+                    <p class="text-sm max-w-xs text-white/80">Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
                     <form class="flex w-full md:max-w-md">
                         <input type="email" placeholder="Email Address" class="w-full px-6 py-3 bg-white border-none outline-none rounded-l-full text-sm">
                         <button class="bg-[#1e73be] text-white px-8 py-3 font-bold text-xs tracking-widest hover:bg-blue-700 transition-colors rounded-r-full">SUBSCRIBE</button>
                     </form>
                 </div>
-                   <hr class="border-gray-200 my-8">
+                   <hr class="border-white/20 my-8">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
             <div>
-                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">CUSTOMER SERVICE</h4>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">CUSTOMER SERVICE</h4>
                 <div class="grid grid-cols-2 gap-2">
                     <ul class="text-sm space-y-2">
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">My Account</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">My Account</a></li>
                     </ul>
                     <ul class="text-sm space-y-2">
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Orders History</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Advanced Search</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Login</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Orders History</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Advanced Search</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Login</a></li>
                     </ul>
                 </div>
             </div>
 
             <div>
-                <h4 class="font-bold mb-6 text-sm text-gray-800 tracking-wider">ABOUT US</h4>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">ABOUT US</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <ul class="text-sm space-y-2">
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Super Fast Html Template</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">1st Fully working Ajax Theme</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">33 Unique Shop Layouts</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Super Fast Html Template</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">1st Fully working Ajax Theme</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">33 Unique Shop Layouts</a></li>
                     </ul>
                     <ul class="text-sm space-y-2">
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Powerful Admin Panel</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Mobile & Retina Optimized</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Powerful Admin Panel</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Mobile & Retina Optimized</a></li>
                     </ul>
                 </div>
             </div>
@@ -988,11 +1182,11 @@
 
      
 
-        <div class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-wider">
-            <p>Copyright © 2017-2025 ACGHAR.COM. All Rights Reserved.</p>
+        <div class="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-wider">
+            <p class="text-white/80">Copyright © 2017-2025 ACGHAR.COM. All Rights Reserved.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="text-white/80 hover:text-white/100 transition-colors">Terms of Use</a>
+                <a href="#" class="text-white/80 hover:text-white/100 transition-colors">Privacy Policy</a>
             </div>
         </div>
     </div>
