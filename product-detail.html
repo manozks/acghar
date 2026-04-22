@@ -152,34 +152,45 @@
     </div>
 </div>
 
-<section class="container mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
-        <div class="space-y-4">
-            <div class="relative bg-white border border-gray-200 rounded-xl overflow-hidden group">
+<section class="container mx-auto py-2">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[4fr_4fr_2fr] gap-4 p-4">
+
+  <!-- product item  -->
+  <div>
+    <div class="relative bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden group">
                 <img id="mainImage" src="images/item.jpg" alt="Product Main" class="w-full h-[400px] object-contain p-8 transition-opacity duration-300">
                 <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 text-xs font-bold rounded uppercase">-20% OFF</div>
             </div>
 
-            <div class="grid grid-cols-4 gap-4" id="thumbGallery">
-                <div class="thumb-item border-2 border-[#1e73be] rounded-lg p-2 cursor-pointer bg-white">
+            <div class="grid grid-cols-4 gap-4 mt-3" id="thumbGallery">
+                <div class="thumb-item bg-white rounded-3xl shadow-sm border border-gray-100 p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
                     <img src="images/item.jpg" class="w-full object-contain">
                 </div>
-                <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                <div class="thumb-item bg-white rounded-3xl shadow-sm border border-gray-100 p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
                     <img src="images/item1.jpg" class="w-full object-contain">
                 </div>
-                <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                <div class="thumb-item bg-white rounded-3xl shadow-sm border border-gray-100 p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
                     <img src="images/item2.jpg" class="w-full object-contain">
                 </div>
-                 <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                 <div class="thumb-item bg-white rounded-3xl shadow-sm border border-gray-100 p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
                     <img src="images/item3.jpg" class="w-full object-contain">
                 </div>
             </div>
-        </div>
 
-        
+             <div class="flex items-center space-x-8  mt-4 p-3 border-b border-t border-gray-100">
+        <button class="flex items-center text-[11px] font-bold text-gray-500 uppercase tracking-widest hover:text-red-500 transition-colors group">
+            <i class="far fa-bookmark text-lg mr-2 group-hover:scale-110 transition-transform"></i> Add to Wishlist
+        </button>
+        <button class="flex items-center text-[11px] font-bold text-gray-500 uppercase tracking-widest hover:text-[#1e73be] transition-colors group">
+            <i class="fas fa-random text-lg mr-2 group-hover:rotate-180 transition-transform duration-500"></i> Compare
+        </button>
+    </div>
+  </div>
 
-<div class="flex flex-col">
+  <!-- product item detail -->
+  <div class="">
+    <div class="flex flex-col">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold text-[#1e73be] uppercase tracking-widest">Premium Series</span>
         <span class="flex items-center bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full border border-green-100 uppercase tracking-wide">
@@ -188,47 +199,52 @@
         </span>
     </div>
 
-    <h1 class="text-3xl md:text-4xl font-black text-[#222529] mb-4 tracking-tighter leading-tight">
+    <h1 class="text-xl md:text-2xl font-black text-[#222529] mb-4 tracking-tighter leading-tight">
         Inverter Split Air Conditioner 1.5 Ton
     </h1>
 
     <div class="mb-6 py-4 border-t border-b border-gray-100 flex items-baseline space-x-4">
-        <span class="text-4xl font-black text-[#1e73be]">Rs 125,000</span>
+        <span class="text-xl font-black text-[#1e73be]">Rs 125,000</span>
         <span class="text-xl text-gray-400 line-through font-light">Rs 150,000</span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 mb-8 bg-gray-50 p-5 rounded-2xl border border-gray-100">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mb-4 bg-gray-50 p-4 rounded-2xl border border-gray-100">
         <div class="flex items-center text-sm">
-            <i class="fas fa-copyright text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Brand:</span>
+            <i class="fas fa-copyright text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Brand:</span>
             <span class="text-gray-600 font-medium">Samsung / Gree</span>
         </div>
         <div class="flex items-center text-sm">
-            <i class="fas fa-th-large text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Category:</span>
+            <i class="fas fa-th-large text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Category:</span>
             <span class="text-gray-600 font-medium">Split AC</span>
         </div>
         <div class="flex items-center text-sm">
-            <i class="fas fa-tag text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Model:</span>
+            <i class="fas fa-tag text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Model:</span>
             <span class="text-gray-600 font-medium">1.5Ton inverter wifi</span>
         </div>
         <div class="flex items-center text-sm">
-            <i class="fas fa-shield-alt text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Warranty:</span>
+            <i class="fas fa-shield-alt text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Warranty:</span>
             <span class="text-gray-600 font-medium">5 Years</span>
         </div>
         <div class="flex items-center text-sm">
-            <i class="fas fa-microchip text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Technology:</span>
+            <i class="fas fa-microchip text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Technology:</span>
             <span class="text-gray-600 font-medium">Inverter</span>
         </div>
         <div class="flex items-center text-sm">
-            <i class="fas fa-snowflake text-[#1e73be] w-5 text-xs"></i>
-            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Capacity:</span>
+            <i class="fas fa-snowflake text-[#1e73be] w-3 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-20 ml-2">Capacity:</span>
             <span class="text-gray-600 font-medium">1.0 Ton</span>
         </div>
+     
     </div>
+       <!-- <p class="text-gray-600 text-sm leading-relaxed mb-8">
+        High-performance cooling with advanced inverter technology. Includes smart app control and anti-bacterial filters.
+    </p> -->
+    
 
     <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
         <div class="flex items-center border-2 border-gray-100 rounded-full bg-white px-2 h-14">
@@ -241,14 +257,7 @@
         </button>
     </div>
 
-    <div class="flex items-center space-x-8 mb-4 pb-2 border-b border-gray-100">
-        <button class="flex items-center text-[11px] font-bold text-gray-500 uppercase tracking-widest hover:text-red-500 transition-colors group">
-            <i class="far fa-bookmark text-lg mr-2 group-hover:scale-110 transition-transform"></i> Add to Wishlist
-        </button>
-        <button class="flex items-center text-[11px] font-bold text-gray-500 uppercase tracking-widest hover:text-[#1e73be] transition-colors group">
-            <i class="fas fa-random text-lg mr-2 group-hover:rotate-180 transition-transform duration-500"></i> Compare
-        </button>
-    </div>
+   
 
     <div class="relative overflow-hidden bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-center justify-between group cursor-pointer mb-4 transition-all hover:border-amber-400">
         <div class="absolute inset-0 w-full h-full">
@@ -283,25 +292,82 @@
         </a>
     </div>
 
-    <div class="flex items-center space-x-4 pt-6 border-t border-gray-100">
-        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Share Product:</span>
-        <div class="flex space-x-2">
-            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#3b5998] hover:text-white hover:border-[#3b5998] transition-all">
-                <i class="fab fa-facebook-f text-xs"></i>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#1da1f2] hover:text-white hover:border-[#1da1f2] transition-all">
-                <i class="fab fa-twitter text-xs"></i>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#e60023] hover:text-white hover:border-[#e60023] transition-all">
-                <i class="fab fa-pinterest-p text-xs"></i>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all">
-                <i class="fab fa-linkedin-in text-xs"></i>
-            </a>
-        </div>
-    </div>
+   
 </div>
-    </div>
+  </div>
+
+  <!-- scan qr code -->
+  <div class="bg-white rounded-3xl shadow-sm border border-gray-100 w-full overflow-hidden p-4 text-center md:col-span-2 lg:col-span-1">
+    <div class="flex justify-between items-center mb-6">
+           
+            <h2 class="text-orange-600 font-bold text-lg tracking-wide uppercase">Scan to Share</h2>
+            <button class="text-orange-600">
+                <i class="fa-solid fa-share-nodes text-lg"></i>
+            </button>
+        </div>
+
+        <div class="relative  mb-4 inline-block mx-auto">
+            <div class="bg-white">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://google.com" 
+                     alt="QR Code" 
+                     class="w-32 h-32 mx-auto">
+                <div class="absolute inset-0 flex items-center justify-center">
+                   <div class="bg-white p-2 rounded-xl shadow-md border border-orange-100">
+                        <i class="fa-solid fa-bag-shopping text-orange-500 text-3xl"></i>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray-500 text-sm px-6 leading-tight mb-4">
+            Scan this QR code to view this product on your mobile device
+        </p>
+
+        <div class="relative flex py-4 items-center">
+            <div class="flex-grow border-t border-dashed border-gray-300"></div>
+            <span class="flex-shrink mx-4 text-gray-500 text-xs font-semibold uppercase tracking-wider">Or Share Via</span>
+            <div class="flex-grow border-t border-dashed border-gray-300"></div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 mb-8">
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center text-white text-lg cursor-pointer hover:opacity-90 transition shadow-sm">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-500">WhatsApp</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-8 h-8 bg-[#1877F2] rounded-full flex items-center justify-center text-white text-lg cursor-pointer hover:opacity-90 transition shadow-sm">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-500">Facebook</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-8 h-8 bg-[#1DA1F2] rounded-full flex items-center justify-center text-white text-lg cursor-pointer hover:opacity-90 transition shadow-sm">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-500">Twitter</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-white text-lg cursor-pointer hover:opacity-90 transition shadow-sm">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-500 text-nowrap">Copy Link</span>
+            </div>
+        </div>
+
+        <div class="bg-[#fff1e6] rounded-2xl p-3 flex items-center gap-3 text-left">
+            <div class="bg-[#fde6d2] p-2 rounded-xl">
+                <i class="fa-solid fa-gift text-orange-500 text-xl"></i>
+            </div>
+            <div>
+                <p class="text-orange-800 font-bold text-sm leading-tight">Share with friends & family!</p>
+                <p class="text-orange-700 text-sm leading-tight">They'll love this.</p>
+            </div>
+        </div>
+  </div>
+</div>
+    
 
     <div class="mt-20">
         <div class="flex border-b border-gray-200 overflow-x-auto no-scrollbar" id="tabHeader">
