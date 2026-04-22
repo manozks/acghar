@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for things Tailwind is too verbose for */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+   
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+    }
+    /* Pause on hover for better UX */
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+
+    
+    
+
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+<div class="bg-[#F6F7F9] text-[#777] text-[11px] py-2 border-b hidden md:block">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <p class="font-semibold uppercase tracking-tight">Free Returns. Standard Shipping Orders RS 5000+</p>
+        <div class="flex space-x-4 items-center uppercase">
+            <div class="flex space-x-3 border-r pr-4">
+                <a href="#" class="hover:text-[#1e73be] transition-colors">My Account</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">About Us</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Blog</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">My Wishlist</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Cart</a>
+                <a href="#" class="hover:text-[#1e73be] transition-colors">Log In</a>
+            </div>
+          
+            <div class="flex space-x-3 text-sm">
+                <i class="fab fa-facebook-f hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-twitter hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-instagram hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-whatsapp hover:text-[#1e73be] cursor-pointer"></i>
+                <i class="fab fa-youtube hover:text-[#1e73be] cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="bg-[#F6F7F9] py-5">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3 flex-shrink-0">
+          
+            <div>
+               <img src="images/logo.png" alt="Logo" class="h-8 w-auto">
+            </div>
+        </div>
+
+        <div class="hidden lg:flex flex-grow max-w-2xl mx-10">
+            <div class="flex w-full border-1 border-[#eeeeee] rounded-full overflow-hidden">
+                <input type="text" placeholder="Search..." class="w-full px-5 py-2.5 outline-none text-sm">
+               
+                <button class="bg-white px-4 text-[#222529] hover:text-[#1e73be] border-l text-gray-500">
+                    <i class="fas fa-search text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-5">
+            <div class="hidden xl:flex items-center space-x-3 mr-2">
+                <i class="fas fa-phone text-3xl text-[#222529]"></i>
+                <div class="leading-none">
+                    <p class="text-[10px] text-gray-400 font-bold mb-1">CALL US NOW</p>
+                    <p class="text-lg font-bold text-[#222529] tracking-tight">+977 9865479949</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5 text-2xl text-[#222529]">
+                <i class="far fa-user cursor-pointer hover:text-[#1e73be]"></i>
+                <i class="far fa-bookmark cursor-pointer hover:text-[#1e73be]"></i>
+                <div class="relative cursor-pointer hover:text-[#1e73be]">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-1 -right-2 bg-[#1e73be] text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center font-bold">3</span>
+                </div>
+                <button id="menu-btn" class="lg:hidden text-2xl ml-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="bg-[#1e73be] text-white hidden lg:block">
+    <div class="container mx-auto px-4 flex justify-between items-center font-bold text-[13px]">
+        <ul class="flex">
+            <li class="bg-[#0a549d] px-5 py-4 cursor-pointer">HOME</li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">CATEGORIES <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">PRODUCTS <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">PAGES <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">BLOG</li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">ELEMENTS <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
+            <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">CONTACT US</li>
+        </ul>
+        <div class="flex space-x-6 tracking-wide">
+            <a href="#" class="hover:text-yellow-400">SPECIAL OFFER!</a>
+            <a href="#" class="hover:text-yellow-400">BUY PORTO!</a>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden lg:hidden">
+    <div class="bg-[#222529] w-72 h-full p-6 text-white transform -translate-x-full transition-transform duration-300 ease-in-out" id="mobile-sidebar">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-bold">MENU</span>
+            <button id="close-menu" class="text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4 text-sm font-semibold">
+            <li class="border-b border-gray-700 pb-2"><a href="#">HOME</a></li>
+            <li class="border-b border-gray-700 pb-2 flex justify-between">CATEGORIES <i class="fas fa-chevron-right text-xs"></i></li>
+            <li class="border-b border-gray-700 pb-2 flex justify-between">PRODUCTS <i class="fas fa-chevron-right text-xs"></i></li>
+            <li class="border-b border-gray-700 pb-2"><a href="#">BLOG</a></li>
+            <li class="border-b border-gray-700 pb-2"><a href="#">CONTACT US</a></li>
+        </ul>
+    </div>
+</div>
+
+<section>
+<div class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4 text-xs uppercase tracking-wider text-gray-500">
+        <a href="#" class="hover:text-[#1e73be]">Home</a>
+        <span class="mx-2">/</span>
+        <a href="#" class="hover:text-[#1e73be]">Electronics</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900 font-bold">Split AC 1.5 Ton</span>
+    </div>
+</div>
+
+<section class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <div class="space-y-4">
+            <div class="relative bg-white border border-gray-200 rounded-xl overflow-hidden group">
+                <img id="mainImage" src="images/item.jpg" alt="Product Main" class="w-full h-[500px] object-contain p-8 transition-opacity duration-300">
+                <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 text-xs font-bold rounded uppercase">-20% OFF</div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4" id="thumbGallery">
+                <div class="thumb-item border-2 border-[#1e73be] rounded-lg p-2 cursor-pointer bg-white">
+                    <img src="images/item.jpg" class="w-full object-contain">
+                </div>
+                <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                    <img src="images/item1.jpg" class="w-full object-contain">
+                </div>
+                <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                    <img src="images/item2.jpg" class="w-full object-contain">
+                </div>
+                 <div class="thumb-item border border-gray-200 rounded-lg p-2 cursor-pointer bg-white hover:border-[#1e73be] transition-colors">
+                    <img src="images/item3.jpg" class="w-full object-contain">
+                </div>
+            </div>
+        </div>
+ <div class="flex flex-col">
+    <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-bold text-[#1e73be] uppercase tracking-widest">Premium Series</span>
+        <span class="flex items-center bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full border border-green-100 uppercase tracking-wide">
+            <span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            In Stock
+        </span>
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-black text-[#222529] mb-4 tracking-tighter leading-tight">
+        Inverter Split Air Conditioner 1.5 Ton
+    </h1>
+
+    
+
+    <div class="mb-6 py-4 border-t border-b border-gray-100 flex items-baseline space-x-4">
+        <span class="text-4xl font-black text-[#1e73be]">Rs 125,000</span>
+        <span class="text-xl text-gray-400 line-through font-light">Rs 150,000</span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 mb-8 bg-gray-50 p-5 rounded-2xl border border-gray-100">
+        <div class="flex items-center text-sm">
+            <i class="fas fa-tag text-[#1e73be] w-5 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Model:</span>
+            <span class="text-gray-600 font-medium">1.5Ton inverter wifi</span>
+        </div>
+        <div class="flex items-center text-sm">
+            <i class="fas fa-shield-alt text-[#1e73be] w-5 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Warranty:</span>
+            <span class="text-gray-600 font-medium">5 Years</span>
+        </div>
+        <div class="flex items-center text-sm">
+            <i class="fas fa-microchip text-[#1e73be] w-5 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Technology:</span>
+            <span class="text-gray-600 font-medium">Inverter</span>
+        </div>
+        <div class="flex items-center text-sm">
+            <i class="fas fa-snowflake text-[#1e73be] w-5 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">Capacity:</span>
+            <span class="text-gray-600 font-medium">1.0 Ton</span>
+        </div>
+        <div class="flex items-center text-sm col-span-full pt-1 border-t border-gray-200 mt-1">
+            <i class="fas fa-wifi text-[#1e73be] w-5 text-xs"></i>
+            <span class="font-bold text-gray-700 uppercase text-[10px] w-24 ml-2">User Control:</span>
+            <span class="text-gray-600 font-medium">Remote Controller with WiFi</span>
+        </div>
+    </div>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-8">
+        High-performance cooling with advanced inverter technology. Saves up to 60% on electricity bills while maintaining the perfect temperature for your comfort. Includes smart app control and anti-bacterial filters.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+        <div class="flex items-center border-2 border-gray-100 rounded-full bg-white px-2 h-14">
+            <button class="w-10 h-full text-gray-400 hover:text-[#1e73be] transition-colors font-bold">-</button>
+            <input type="text" value="1" class="w-10 text-center bg-transparent font-black text-[#222529] outline-none text-lg">
+            <button class="w-10 h-full text-gray-400 hover:text-[#1e73be] transition-colors font-bold">+</button>
+        </div>
+        <button class="w-full sm:flex-1 bg-[#222529] text-white font-black text-sm uppercase tracking-widest h-14 rounded-full hover:bg-[#1e73be] transition-all transform active:scale-95 shadow-xl flex items-center justify-center">
+            <i class="fas fa-shopping-cart mr-3"></i> Add to Cart
+        </button>
+    </div>
+
+    <div class="flex items-center space-x-4 pt-6 border-t border-gray-100">
+        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Share Product:</span>
+        <div class="flex space-x-2">
+            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#3b5998] hover:text-white hover:border-[#3b5998] transition-all">
+                <i class="fab fa-facebook-f text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#1da1f2] hover:text-white hover:border-[#1da1f2] transition-all">
+                <i class="fab fa-twitter text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#e60023] hover:text-white hover:border-[#e60023] transition-all">
+                <i class="fab fa-pinterest-p text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all">
+                <i class="fab fa-linkedin-in text-xs"></i>
+            </a>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="mt-20">
+        <div class="flex border-b border-gray-200 overflow-x-auto no-scrollbar" id="tabHeader">
+            <button onclick="switchTab(event, 'description')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-[#1e73be] text-[#1e73be] uppercase tracking-wider transition-all">Description</button>
+            <button onclick="switchTab(event, 'specs')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">Specifications</button>
+            <button onclick="switchTab(event, 'reviews')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">Reviews (12)</button>
+        </div>
+
+        <div id="tabContent">
+            <div id="description" class="tab-pane py-10 text-gray-600 text-sm leading-7 space-y-4">
+                <p>Our Split AC unit is engineered for extreme tropical climates. With a 100% copper condenser and gold-fin technology, it resists corrosion and delivers durable performance for years to come.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Turbo Cooling Mode for instant relief.</li>
+                    <li>Self-Cleaning function prevents mold buildup.</li>
+                    <li>Low Noise Operation (Under 20dB).</li>
+                </ul>
+            </div>
+
+            <div id="specs" class="tab-pane hidden py-10 text-gray-600 text-sm leading-7">
+                <table class="w-full border-collapse border border-gray-100">
+                    <tr class="bg-gray-50"><td class="p-3 border font-bold">Capacity</td><td class="p-3 border">1.5 Ton</td></tr>
+                    <tr><td class="p-3 border font-bold">Energy Rating</td><td class="p-3 border">5 Star Inverter</td></tr>
+                    <tr class="bg-gray-50"><td class="p-3 border font-bold">Voltage</td><td class="p-3 border">220-240V</td></tr>
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-pane hidden py-10 text-gray-600 text-sm leading-7">
+                <p>There are no reviews for this product yet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // --- Gallery Logic ---
+    const mainImg = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumb-item');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            // Get clicked image src
+            const newSrc = this.querySelector('img').getAttribute('src');
+            
+            // Add a quick fade out/in effect
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = newSrc;
+                mainImg.style.opacity = '1';
+            }, 150);
+
+            // Update thumbnail borders
+            thumbnails.forEach(t => t.classList.replace('border-[#1e73be]', 'border-gray-200'));
+            this.classList.replace('border-gray-200', 'border-[#1e73be]');
+        });
+    });
+
+    // --- Tab Switching Logic ---
+    function switchTab(event, tabId) {
+        // 1. Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
+        
+        // 2. Remove active styles from all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('border-[#1e73be]', 'text-[#1e73be]');
+            btn.classList.add('border-transparent', 'text-gray-400');
+        });
+
+        // 3. Show clicked tab and highlight button
+        document.getElementById(tabId).classList.remove('hidden');
+        event.currentTarget.classList.remove('border-transparent', 'text-gray-400');
+        event.currentTarget.classList.add('border-[#1e73be]', 'text-[#1e73be]');
+    }
+</script>
+
+    </section>
+
+ 
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+    <footer class="bg-[#1b8dcc] pt-16 pb-8 border-t">
+       <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+            <div class="lg:col-span-1">
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">CONTACT INFO</h4>
+                <div class="text-sm space-y-4">
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">ADDRESS:</strong>Kupondole, Lalitpur, Nepal</p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">PHONE:</strong>01-5423384, 01-5268961, 9865479949,
+9741661800, 9805950020, 981-8776832</p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">EMAIL:</strong><a href="mailto:electroref.tech@gmail.com" class="hover:text-blue-600">electroref.tech@gmail.com</a></p>
+                    <p class="text-white/80"><strong class="text-white/80 block text-xs">WORKING DAYS/HOURS:</strong>Sun - Sat: 9:00 am- 7:00pm</p>
+                </div>
+                <div class="flex space-x-2 mt-6">
+                    <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-twitter text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full  flex items-center justify-center bg-[#1e73be] hover:bg-blue-700 text-white transition-all"><i class="fab fa-youtube text-xs"></i></a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">SUBSCRIBE NEWSLETTER</h4>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <p class="text-sm max-w-xs text-white/80">Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
+                    <form class="flex w-full md:max-w-md">
+                        <input type="email" placeholder="Email Address" class="w-full px-6 py-3 bg-white border-none outline-none rounded-l-full text-sm">
+                        <button class="bg-[#1e73be] text-white px-8 py-3 font-bold text-xs tracking-widest hover:bg-blue-700 transition-colors rounded-r-full">SUBSCRIBE</button>
+                    </form>
+                </div>
+                   <hr class="border-white/20 my-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">CUSTOMER SERVICE</h4>
+                <div class="grid grid-cols-2 gap-2">
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">My Account</a></li>
+                    </ul>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Orders History</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Advanced Search</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-sm text-white tracking-wider">ABOUT US</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Super Fast Html Template</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">1st Fully working Ajax Theme</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">33 Unique Shop Layouts</a></li>
+                    </ul>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Powerful Admin Panel</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-white/100 transition-colors">Mobile & Retina Optimized</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+     
+
+        <div class="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-wider">
+            <p class="text-white/80">Copyright © 2017-2025 ACGHAR.COM. All Rights Reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-white/80 hover:text-white/100 transition-colors">Terms of Use</a>
+                <a href="#" class="text-white/80 hover:text-white/100 transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="fixed bottom-4 right-4 bg-[#4e4e4e] text-white w-10 h-10 flex items-center justify-center hover:bg-gray-700 transition-colors">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    </footer>
+
+
+   
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileSidebar.classList.remove('-translate-x-full'), 10);
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileSidebar.classList.add('-translate-x-full');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    });
+
+    // Close on overlay click
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu.click();
+    });
+</script>
+</body>
+</html>
