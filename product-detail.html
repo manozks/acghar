@@ -26,6 +26,14 @@
         animation-play-state: paused;
     }
 
+    @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+    animation: shimmer 2.5s infinite;
+}
+
     
     
 
@@ -168,6 +176,9 @@
                 </div>
             </div>
         </div>
+
+        
+
  <div class="flex flex-col">
     <div class="flex items-center justify-between mb-2">
         <span class="text-xs font-bold text-[#1e73be] uppercase tracking-widest">Premium Series</span>
@@ -216,9 +227,7 @@
         </div>
     </div>
 
-    <p class="text-gray-600 text-sm leading-relaxed mb-8">
-        High-performance cooling with advanced inverter technology. Saves up to 60% on electricity bills while maintaining the perfect temperature for your comfort. Includes smart app control and anti-bacterial filters.
-    </p>
+    
 
     <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
         <div class="flex items-center border-2 border-gray-100 rounded-full bg-white px-2 h-14">
@@ -230,6 +239,44 @@
             <i class="fas fa-shopping-cart mr-3"></i> Add to Cart
         </button>
     </div>
+
+    <div class="relative overflow-hidden bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-center justify-between group cursor-pointer mb-6 transition-all hover:border-amber-400">
+    
+    <div class="absolute inset-0 w-full h-full">
+        <div class="animate-shimmer absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -skew-x-12"></div>
+    </div>
+
+    <div class="relative z-10 flex items-center">
+        <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center mr-3 shadow-sm">
+            <i class="fas fa-percentage text-xs"></i>
+        </div>
+        <div>
+            <p class="text-[10px] text-amber-600 font-bold uppercase tracking-widest leading-none mb-1">Financing Offer</p>
+            <p class="text-xs font-black text-gray-800 uppercase">EMI Available starting from <span class="text-amber-600">Rs. 4,500/mo</span></p>
+        </div>
+    </div>
+
+    <div class="relative z-10 text-right">
+        <span class="text-[9px] font-black text-white bg-amber-500 px-2 py-1 rounded uppercase tracking-tighter">View Plans</span>
+    </div>
+</div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+  
+    <a href="https://wa.me/1234567890" target="_blank" class="flex items-center justify-center bg-[#25D366] text-white py-3 px-4 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-[#128C7E] transition-all shadow-sm">
+        <i class="fab fa-whatsapp mr-2 text-sm"></i> WhatsApp
+    </a>
+
+    <a href="#" class="flex items-center justify-center bg-gray-100 text-gray-700 py-3 px-4 rounded-full font-bold text-[11px] uppercase tracking-widest hover:bg-gray-200 transition-all border border-gray-200">
+        <i class="fas fa-file-download mr-2"></i> Download Catalog
+    </a>
+
+    <a href="#" class="flex items-center justify-center bg-white text-[#222529] py-3 px-4 rounded-full font-bold text-[11px] uppercase tracking-widest hover:border-[#1e73be] hover:text-[#1e73be] transition-all border-2 border-gray-100">
+        <i class="fas fa-file-invoice mr-2"></i> Request Quotation
+    </a>
+</div>
+
+
 
     <div class="flex items-center space-x-4 pt-6 border-t border-gray-100">
         <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Share Product:</span>
