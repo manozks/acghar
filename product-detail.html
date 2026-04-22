@@ -369,11 +369,12 @@
 </div>
     
 
-    <div class="mt-20">
+    <div class="mt-10 px-4">
         <div class="flex border-b border-gray-200 overflow-x-auto no-scrollbar" id="tabHeader">
-            <button onclick="switchTab(event, 'description')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-[#1e73be] text-[#1e73be] uppercase tracking-wider transition-all">Description</button>
+            <button onclick="switchTab(event, 'description')" class="tab-btn px-4 py-4 text-sm font-bold border-b-2 border-[#1e73be] text-[#1e73be] uppercase tracking-wider transition-all">Description</button>
             <button onclick="switchTab(event, 'specs')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">Specifications</button>
-            <button onclick="switchTab(event, 'reviews')" class="tab-btn px-8 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">Reviews (12)</button>
+            <button onclick="switchTab(event, 'more-info')" class="tab-btn px-4 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">More Info</button>
+            <button onclick="switchTab(event, 'reviews')" class="tab-btn px-4 py-4 text-sm font-bold border-b-2 border-transparent text-gray-400 hover:text-[#222529] uppercase tracking-wider transition-all">Reviews (12)</button>
         </div>
 
         <div id="tabContent">
@@ -393,7 +394,9 @@
                     <tr class="bg-gray-50"><td class="p-3 border font-bold">Voltage</td><td class="p-3 border">220-240V</td></tr>
                 </table>
             </div>
-
+            <div id="more-info" class="tab-pane hidden py-10 text-gray-600 text-sm leading-7">
+                <p>This model comes with a 5-year warranty on the compressor and 1-year warranty on other parts. Installation is free within the Kathmandu valley. EMI options available with select banks.</p>
+            </div>
             <div id="reviews" class="tab-pane hidden py-10 text-gray-600 text-sm leading-7">
                 <p>There are no reviews for this product yet.</p>
             </div>
