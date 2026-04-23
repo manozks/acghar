@@ -241,9 +241,9 @@
         </div>
      
     </div>
-       <!-- <p class="text-gray-600 text-sm leading-relaxed mb-8">
+    <p class="text-gray-600 text-sm leading-relaxed mb-8">
         High-performance cooling with advanced inverter technology. Includes smart app control and anti-bacterial filters.
-    </p> -->
+    </p> 
     
 
     <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
@@ -402,7 +402,154 @@
             </div>
         </div>
     </div>
+
+    <!-- similar products section -->
+
+<div class="w-full mt-8">
+    <div class="flex justify-between items-center mb-4 px-1">
+        <h3 class="text-gray-800 font-bold text-lg">Similar Products</h3>
+        <div class="flex gap-2">
+            <button onclick="scrollProducts(-1)" class="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-orange-50 hover:text-orange-600 transition shadow-sm">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button onclick="scrollProducts(1)" class="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-orange-50 hover:text-orange-600 transition shadow-sm">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="product-scroll" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-4">
+        
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Canvas Tote Bag</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$24.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Leather Wallet</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$45.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Classic Watch</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$89.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Premium Headphones</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$120.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Retro Sunglasses</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$35.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Polaroid Camera</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$79.00</p>
+        </div>
+         <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Premium Headphones</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$120.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Retro Sunglasses</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$35.00</p>
+        </div>
+
+        <div class="min-w-[150px] md:min-w-[calc((100%-80px)/6)] snap-start bg-white rounded-2xl border border-gray-100 p-2 shadow-sm">
+            <a href="/product-details" class="block aspect-square bg-gray-50 rounded-xl mb-2 overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&q=80&w=200" 
+                     alt="Product" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <a href="/product-details" class="block">
+                <p class="text-xs font-semibold text-gray-800 truncate hover:text-orange-600 transition-colors">Polaroid Camera</p>
+            </a>
+            <p class="text-xs text-orange-600 font-bold mt-1">$79.00</p>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+    function scrollProducts(direction) {
+        const container = document.getElementById('product-scroll');
+        // On desktop, we scroll by the width of one item to keep it precise
+        const itemWidth = container.firstElementChild.offsetWidth + 16; // width + gap
+        container.scrollBy({
+            left: direction * itemWidth,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
 </section>
+
+
 
 
 
