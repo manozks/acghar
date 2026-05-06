@@ -271,60 +271,161 @@
                 </div>
             </li>
 
-         <!-- Parent LI -->
-<li class="group static px-5 py-4 hover:bg-[#0a549d] hover:text-white cursor-pointer flex items-center transition-colors">
-    <span class="text-sm font-bold tracking-wide uppercase">Brands</span>
-    <i class="fas fa-chevron-down ml-2 text-[10px] transition-transform group-hover:rotate-180"></i>
-
-    <!-- Full Width Mega Menu -->
-    <div class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-0 top-full w-full bg-white shadow-2xl border-t border-slate-100 transition-all duration-300 z-50">
-        
-        <!-- Grid Container -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 border border-slate-100">
-            
-            <!-- Brand Item Template -->
-            @php
-                $demoBrands = [
-                    ['name' => 'Nike', 'logo' => 'https://logo.clearbit.com/nike.com'],
-                    ['name' => 'Adidas', 'logo' => 'https://logo.clearbit.com/adidas.com'],
-                    ['name' => 'Puma', 'logo' => 'https://logo.clearbit.com/puma.com'],
-                    ['name' => 'Reebok', 'logo' => 'https://logo.clearbit.com/reebok.com'],
-                    ['name' => 'Under Armour', 'logo' => 'https://logo.clearbit.com/underarmour.com'],
-                    ['name' => 'New Balance', 'logo' => 'https://logo.clearbit.com/newbalance.com'],
-                    ['name' => 'Asics', 'logo' => 'https://logo.clearbit.com/asics.com'],
-                    ['name' => 'Fila', 'logo' => 'https://logo.clearbit.com/fila.com'],
-                ];
-            @endphp
-
-            @foreach($demoBrands as $brand)
-            <a href="#" class="group/item flex flex-col items-center justify-center p-8 border-b border-r border-slate-100 hover:bg-slate-50 transition-all">
-                <div class="h-12 w-20 flex items-center justify-center overflow-hidden">
-                    <img 
-                        src="{{ $brand['logo'] }}" 
-                        alt="{{ $brand['name'] }}" 
-                        class="max-h-full max-w-full object-contain grayscale opacity-60 group-hover/item:grayscale-0 group-hover/item:opacity-100 transition-all duration-300"
-                    >
+            <!-- BRANDS MEGA MENU TRIGGER -->
+            <!-- 'static' allows the absolute child to span full screen width -->
+            <li class="static group">
+                <div id="brands-trigger" onclick="toggleBrandsMenu()" class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center font-bold text-[13px] uppercase">
+                    BRANDS <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
                 </div>
-                <span class="mt-4 text-[11px] font-bold text-slate-400 group-hover/item:text-[#0a549d] uppercase tracking-widest transition-colors">
-                    {{ $brand['name'] }}
-                </span>
-            </a>
-            @endforeach
 
-            <!-- Repeat or Add more items as needed -->
-        </div>
+                <!-- Mega Menu Body (Full Width) -->
+                <div id="brandsMegaMenu" class="hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 z-50">
+                    <div class="container mx-auto py-10 px-4">
+                        
+                        <!-- Header (Optional) -->
+                        <div class="mb-6 flex justify-between items-center border-b border-gray-100 pb-4">
+                            <h3 class="text-gray-800 font-black tracking-widest text-sm uppercase">Shop by Brand</h3>
+                            <a href="#" class="text-[#1e73be] text-xs font-bold hover:underline">View All Brands</a>
+                        </div>
 
-        <!-- Optional Bottom Bar for "View All" -->
-        <div class="bg-slate-50 p-4 border-b border-slate-100">
-            <a href="#" class="flex items-center justify-center text-xs font-bold text-[#0a549d] hover:underline uppercase tracking-tighter">
-                Explore All 50+ Premium Brands
-                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
-        </div>
-    </div>
-</li>
+                        <!-- Border-Grid Layout -->
+                        <!-- 2 cols (mobile), 4 cols (tablet), 8 cols (desktop) -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 border-l border-t border-gray-100">
+                            
+                            <!-- Brand Item Template -->
+                            <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all duration-300">
+                                <div class="h-12 w-full flex items-center justify-center mb-3">
+                                    <!-- Replace with actual logo URLs -->
+                                    <img src="images/brand1.jpg" alt="Samsung" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                </div>
+                                 
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Samsung</span>
+                            </a>
+
+                            <!-- Repeat for other brands -->
+                            <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                <div class="h-12 w-full flex items-center justify-center mb-3">
+                                    <img src="images/brand2.jpg" alt="LG" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">LG</span>
+                            </a>
+                                <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand3.jpg" alt="Whirlpool" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Whirlpool</span>   
+                                </a>
+                                 <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand4.jpg" alt="Bosch" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Bosch</span>
+                                </a>
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand5.jpg" alt="Panasonic" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Panasonic</span>   
+                                    </a>
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                <div class="h-12 w-full flex items-center justify-center mb-3">
+                                    <img src="images/brand2.jpg" alt="LG" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">LG</span>
+                            </a>
+                                <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand3.jpg" alt="Whirlpool" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Whirlpool</span>   
+                                </a>
+                                 <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand4.jpg" alt="Bosch" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Bosch</span>
+                                </a>
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand5.jpg" alt="Panasonic" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Panasonic</span>   
+                                    </a>
+
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                <div class="h-12 w-full flex items-center justify-center mb-3">
+                                    <img src="images/brand2.jpg" alt="LG" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">LG</span>
+                            </a>
+                                <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand3.jpg" alt="Whirlpool" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Whirlpool</span>   
+                                </a>
+                                 <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand4.jpg" alt="Bosch" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Bosch</span>
+                                </a>
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand5.jpg" alt="Panasonic" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Panasonic</span>   
+                                    </a>
+
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                <div class="h-12 w-full flex items-center justify-center mb-3">
+                                    <img src="images/brand2.jpg" alt="LG" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">LG</span>
+                            </a>
+                                <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand3.jpg" alt="Whirlpool" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Whirlpool</span>   
+                                </a>
+                                 <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                    <div class="h-12 w-full flex items-center justify-center mb-3">
+                                        <img src="images/brand4.jpg" alt="Bosch" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                    </div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Bosch</span>
+                                </a>
+                                    <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand5.jpg" alt="Panasonic" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Panasonic</span>   
+                                    </a>
+                                     <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand6.jpg" alt="Sony" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Sony</span>
+                                    </a>
+                                     <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand4.jpg" alt="Hitachi" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Hitachi</span>
+                                    </a>
+                                     <a href="#" class="group/item flex flex-col items-center justify-center p-6 border-r border-b border-gray-200 bg-white hover:bg-white/5 transition-all">
+                                        <div class="h-12 w-full flex items-center justify-center mb-3">
+                                            <img src="images/brand1.jpg" alt="Midea" class="max-h-full object-contain grayscale-0 group-hover/item:grayscale transition-all">
+                                        </div>
+                                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter group-hover/item:text-[#1e73be]">Midea</span>
+                                    </a>
+
+                            <!-- ... (Repeat this block to fill 8 or 16 spots) -->
+
+                        </div>
+                    </div>
+                </div>
+            </li>
             <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">BLOG</li>
             <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer flex items-center">ELEMENTS <i class="fas fa-chevron-down ml-1 text-[8px]"></i></li>
             <li class="px-5 py-4 hover:bg-[#0a549d] cursor-pointer">CONTACT US</li>
@@ -409,6 +510,34 @@
                     <a href="#" class="block p-3 pl-6 hover:bg-white/10 text-xs text-white/90 transition-colors border-b border-white/10">Kitchen Appliances</a>
                     <a href="#" class="block p-3 pl-6 hover:bg-white/10 text-xs text-white/90 transition-colors border-b border-white/10">Smart Appliances</a>
                     <a href="#" class="block p-3 pl-6 hover:bg-white/10 text-xs text-white/90 transition-colors">Accessories & Spare</a>
+                </div>
+            </div>
+
+            <!-- BRANDS ACCORDION -->
+            <div class="bg-white/5 rounded-xl overflow-hidden border border-white/5">
+                <div onclick="toggleMobileAccordion('mobile-brands-acc', 'brands-icon')" class="p-4 flex justify-between items-center cursor-pointer hover:bg-white/10">
+                    BRANDS <i id="brands-icon" class="fas fa-chevron-down text-xs text-white/50 transition-transform"></i>
+                </div>
+                <div id="mobile-brands-acc" class="hidden bg-white p-2 grid grid-cols-3 gap-1">
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand1.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand3.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand4.jpg" class="h-6"></a>
+
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand5.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand6.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand4.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand1.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand4.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand3.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
+                      <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand6.jpg" class="h-6"></a>
+                    <a href="#" class="p-2 border border-gray-100 flex items-center justify-center bg-white rounded"><img src="images/brand2.jpg" class="h-6"></a>
                 </div>
             </div>
 
@@ -1577,6 +1706,26 @@
             icon.classList.add('fa-plus');
         }
     }
+</script>
+
+
+<script>
+    function toggleBrandsMenu() {
+        const menu = document.getElementById('brandsMegaMenu');
+        menu.classList.toggle('hidden');
+        // Close other menus if open
+        const otherMenu = document.getElementById('megaMenu'); // Your product menu ID
+        if (otherMenu) otherMenu.classList.add('hidden');
+    }
+
+    // Close on click outside
+    window.addEventListener('click', function(e) {
+        const menu = document.getElementById('brandsMegaMenu');
+        const trigger = document.getElementById('brands-trigger');
+        if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+        }
+    });
 </script>
 </body>
 </html>
