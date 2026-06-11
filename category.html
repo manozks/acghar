@@ -34,9 +34,6 @@
     animation: shimmer 2.5s infinite;
 }
 
-    
-    
-
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased overflow-x-hidden">
@@ -155,310 +152,213 @@
 <section class="container mx-auto py-4 px-4">
 
  
-    <div class="flex flex-col lg:flex-row gap-8">
+    <div class="flex flex-col lg:flex-row gap-8 relative">
             
-<aside class="w-full lg:w-72 flex-shrink-0 h-fit space-y-4">
+        <div id="filterOverlay" onclick="toggleFilterDrawer()" class="fixed inset-0 bg-black/50 z-[140] hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
 
-
-    <div class="bg-white border border-gray-100 rounded-[1rem] shadow-sm overflow-hidden p-2">
-        
-        <div class="p-4 rounded-[1rem] bg-blue-50/40 mb-2">
-            <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Category</h3>
-            <ul class="space-y-2 text-sm">
-                <li class="flex justify-between items-center text-blue-600 font-bold bg-white p-2 -mx-2 mt-0 rounded-xl shadow-sm border border-blue-100/50">
-                    <span>Domestic AC</span>
-                    <span class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full">45</span>
-                </li>
-                <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>AKL 1.5 Ton Inverter with Wi-Fi </span>
-                    <span class="text-[10px] text-gray-400">21</span>
-                </li>
-                <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>Air Conditioner</span>
-                    <span class="text-[10px] text-gray-400">43</span>
-                </li>
-                 <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>AKL 1.5 Ton Inverter </span>
-                    <span class="text-[10px] text-gray-400">12</span>
-                </li>
-                    <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0  transition-all">
-                        <span>Ceiling Cassette</span>
-                        <span class="text-[10px] text-gray-400">12</span>   
-                    </li>
-                    <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>AKL 1.5 Ton Inverter with Wi-Fi </span>
-                    <span class="text-[10px] text-gray-400">21</span>
-                </li>
-                <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>Air Conditioner</span>
-                    <span class="text-[10px] text-gray-400">43</span>
-                </li>
-                 <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
-                    <span>AKL 1.5 Ton Inverter </span>
-                    <span class="text-[10px] text-gray-400">12</span>
-                </li>
-                    <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0  transition-all">
-                        <span>Ceiling Cassette</span>
-                        <span class="text-[10px] text-gray-400">12</span>   
-                    </li>
-            </ul>
-        </div>
-
-        <div class="p-4 mb-2 border-b border-gray-200">
-            <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Brands</h3>
-            <div class="space-y-1 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">AKL</span>
-                </label>
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">Midea</span>
-                </label>
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">Samsung</span>
-                </label>
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">AKL</span>
-                </label>
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">Midea</span>
-                </label>
-                <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
-                    <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
-                    <span class="group-hover:text-gray-900">Samsung</span>
-                </label>
+        <aside id="asideDrawer" class="w-[85%] max-w-xs lg:w-72 flex-shrink-0 h-full lg:h-fit space-y-4 fixed lg:static top-0 left-0 bg-white lg:bg-transparent z-[150] lg:z-10 p-6 lg:p-0 overflow-y-auto lg:overflow-visible shadow-2xl lg:shadow-none transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+            
+            <div class="flex lg:hidden items-center justify-between border-b pb-4 mb-4">
+                <span class="font-black text-xs uppercase tracking-widest text-[#1e73be] flex items-center gap-2">
+                    <i class="fa-solid fa-sliders"></i> Filter Menu
+                </span>
+                <button onclick="toggleFilterDrawer()" class="text-2xl font-light text-gray-400 hover:text-gray-900">&times;</button>
             </div>
-        </div>
 
-        <div class="p-4 mb-2 border-b border-gray-200">
-            <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Technology</h3>
-            <div class="flex flex-wrap gap-2">
-                <label class="cursor-pointer">
-                    <input type="checkbox" class="hidden peer">
-                    <span class="px-3 py-1.5 rounded-full border border-gray-100 bg-gray-50 text-[11px] text-gray-600 peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition-all block">Inverter</span>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="checkbox" class="hidden peer">
-                    <span class="px-3 py-1.5 rounded-full border border-gray-100 bg-gray-50 text-[11px] text-gray-600 peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue -600 transition-all block">Non-Inverter</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="p-4 mb-2 border-b border-gray-200 grid grid-cols-1 gap-4">
-            <div>
-                <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">Type</h3>
-                <select class="w-full bg-gray-50 border-none rounded-xl px-3 py-2 text-xs text-gray-600 outline-none focus:ring-1 focus:ring-blue-500">
-                    <option>Wall Mount</option>
-                    <option>Floor Standing</option>
-                    <option>Portable</option>
-                    <option>Wall Mount</option>
-                    <option>Floor Standing</option>
-                    <option>Portable</option>
-                </select>
-            </div>
-            <div>
-                <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">User Control</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center gap-2 text-xs text-gray-600 cursor-pointer">
-                        <input type="checkbox" class="rounded text-blue-600"> Smart Wi-Fi
-                    </label>
-                    <label class="flex items-center gap-2 text-xs text-gray-600 cursor-pointer">
-                        <input type="checkbox" class="rounded text-blue-600"> Remote Only
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 mb-2 border-b border-gray-200">
-            <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Capacity</h3>
-            <div class="grid grid-cols-2 gap-2">
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">1.0 Ton</span>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">1.5 Ton</span>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">2.0 Ton</span>   
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">2.5 Ton</span>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">3.0 Ton</span>
-                </label>
-                <label class="cursor-pointer">
-                    <input type="radio" name="cap" class="hidden peer">
-                    <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">3.5 Ton</span>
-                </label>
+            <div class="bg-white border border-gray-100 rounded-[1rem] shadow-sm overflow-hidden p-2">
                 
-            </div>
-            <div class="mt-4">
-                <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">Warranty</h3>
-                <div class="flex gap-4 text-xs text-gray-600">
-                    <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 1 yr</label>
-                    <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 5 yr</label>
-                    <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 10 yr</label>
+                <div class="p-4 rounded-[1rem] bg-blue-50/40 mb-2">
+                    <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Category</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between items-center text-blue-600 font-bold bg-white p-2 -mx-2 mt-0 rounded-xl shadow-sm border border-blue-100/50">
+                            <span>Domestic AC</span>
+                            <span class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full">45</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>AKL 1.5 Ton Inverter with Wi-Fi </span>
+                            <span class="text-[10px] text-gray-400">21</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>Air Conditioner</span>
+                            <span class="text-[10px] text-gray-400">43</span>
+                        </li>
+                         <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>AKL 1.5 Ton Inverter </span>
+                            <span class="text-[10px] text-gray-400">12</span>
+                        </li>
+                            <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0  transition-all">
+                                <span>Ceiling Cassette</span>
+                                <span class="text-[10px] text-gray-400">12</span>   
+                            </li>
+                            <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>AKL 1.5 Ton Inverter with Wi-Fi </span>
+                            <span class="text-[10px] text-gray-400">21</span>
+                        </li>
+                        <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>Air Conditioner</span>
+                            <span class="text-[10px] text-gray-400">43</span>
+                        </li>
+                         <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0 transition-all">
+                            <span>AKL 1.5 Ton Inverter </span>
+                            <span class="text-[10px] text-gray-400">12</span>
+                        </li>
+                            <li class="flex justify-between items-center text-gray-700 hover:text-blue-600 cursor-pointer p-0  transition-all">
+                                <span>Ceiling Cassette</span>
+                                <span class="text-[10px] text-gray-400">12</span>   
+                            </li>
+                    </ul>
                 </div>
+
+                <div class="p-4 mb-2 border-b border-gray-200">
+                    <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Brands</h3>
+                    <div class="space-y-1 max-h-40 overflow-y-auto pr-2 custom-scrollbar">
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">AKL</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">Midea</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">Samsung</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">AKL</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">Midea</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer group">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="group-hover:text-gray-900">Samsung</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="p-4 mb-2 border-b border-gray-200">
+                    <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Technology</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="hidden peer">
+                            <span class="px-3 py-1.5 rounded-full border border-gray-100 bg-gray-50 text-[11px] text-gray-600 peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition-all block">Inverter</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="checkbox" class="hidden peer">
+                            <span class="px-3 py-1.5 rounded-full border border-gray-100 bg-gray-50 text-[11px] text-gray-600 peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition-all block">Non-Inverter</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="p-4 mb-2 border-b border-gray-200 grid grid-cols-1 gap-4">
+                    <div>
+                        <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">Type</h3>
+                        <select class="w-full bg-gray-50 border-none rounded-xl px-3 py-2 text-xs text-gray-600 outline-none focus:ring-1 focus:ring-blue-500">
+                            <option>Wall Mount</option>
+                            <option>Floor Standing</option>
+                            <option>Portable</option>
+                            <option>Wall Mount</option>
+                            <option>Floor Standing</option>
+                            <option>Portable</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">User Control</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 text-xs text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="rounded text-blue-600"> Smart Wi-Fi
+                            </label>
+                            <label class="flex items-center gap-2 text-xs text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="rounded text-blue-600"> Remote Only
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 mb-2 border-b border-gray-200">
+                    <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Capacity</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">1.0 Ton</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">1.5 Ton</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">2.0 Ton</span>   
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">2.5 Ton</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">3.0 Ton</span>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="cap" class="hidden peer">
+                            <span class="block text-center py-2 rounded-xl border border-gray-100 bg-gray-50 text-[10px] font-bold text-gray-500 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:border-blue-200">3.5 Ton</span>
+                        </label>
+                        
+                    </div>
+                    <div class="space-y-2 mt-4">
+                        <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-2">Warranty</h3>
+                        <div class="flex gap-4 text-xs text-gray-600">
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 1 yr</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 5 yr</label>
+                            <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="rounded"> 10 yr</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-gray-50/50 rounded-[1.5rem]">
+                    <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Price Range</h3>
+                    <div class="flex items-center gap-2">
+                        <input type="number" placeholder="Min" class="w-full bg-white border-none rounded-xl px-3 py-2 text-xs focus:ring-1 focus:ring-orange-500 shadow-sm outline-none">
+                        <input type="number" placeholder="Max" class="w-full bg-white border-none rounded-xl px-3 py-2 text-xs focus:ring-1 focus:ring-orange-500 shadow-sm outline-none">
+                        <button class="bg-orange-600 text-white w-10 h-8 rounded-xl flex items-center justify-center hover:bg-orange-700 transition-all shadow-md shadow-orange-100 active:scale-90">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </aside>
 
-        <div class="p-4 bg-gray-50/50 rounded-[1.5rem]">
-            <h3 class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-3">Price Range</h3>
-            <div class="flex items-center gap-2">
-                <input type="number" placeholder="Min" class="w-full bg-white border-none rounded-xl px-3 py-2 text-xs focus:ring-1 focus:ring-orange-500 shadow-sm outline-none">
-                <input type="number" placeholder="Max" class="w-full bg-white border-none rounded-xl px-3 py-2 text-xs focus:ring-1 focus:ring-orange-500 shadow-sm outline-none">
-                <button class="bg-orange-600 text-white w-10 h-8 rounded-xl flex items-center justify-center hover:bg-orange-700 transition-all shadow-md shadow-orange-100 active:scale-90">
-                    <i class="fa-solid fa-arrow-right text-xs"></i>
-                </button>
-            </div>
-        </div>
-
-    </div>
-</aside>
-
-<style>
-    .custom-scrollbar::-webkit-scrollbar { width: 3px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e73be; border-radius: 10px; }
-</style>
+        <style>
+            .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+            .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+            .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e73be; border-radius: 10px; }
+        </style>
 
             <main class="flex-grow">                
-                <div class="flex justify-between items-center mb-6 bg-white p-4 rounded-xl shadow-sm">
-                    <p class="text-sm text-gray-500">Showing <span class="font-bold text-gray-800">627</span> items</p>
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm text-gray-500">Sort By:</span>
-                        <select class="text-sm border-none bg-transparent font-medium focus:ring-0 cursor-pointer">
-                            <option>Default</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select>
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6 bg-white p-4 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-500 order-2 sm:order-1">Showing <span class="font-bold text-gray-800">627</span> items</p>
+                    
+                    <div class="flex items-center justify-between sm:justify-end gap-4 order-1 sm:order-2 w-full sm:w-auto">
+                        <button onclick="toggleFilterDrawer()" class="lg:hidden flex items-center gap-2 bg-[#1e73be] text-white px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md active:scale-95 transition-all">
+                            <i class="fa-solid fa-sliders"></i> Category Filter
+                        </button>
+
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500 whitespace-nowrap">Sort By:</span>
+                            <select class="text-sm border-none bg-transparent font-medium focus:ring-0 cursor-pointer outline-none">
+                                <option>Default</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     
-                    <div class="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-md transition-all group relative">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">
-                            15% OFF
-                        </div>
-                        
-                        <a href="#" class="block aspect-square mb-4 overflow-hidden rounded-xl bg-gray-50">
-                           <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
-                     alt="Product" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </a>
-
-                        <div class="space-y-1">
-                            <p class="text-orange-600 text-[10px] font-bold uppercase tracking-widest">AKL</p>
-                            <a href="#" class="block">
-                                <h2 class="text-sm font-semibold text-gray-800 line-clamp-2 hover:text-orange-600 transition-colors leading-snug">
-                                    AKL 1.5 Ton Inverter with Wi-Fi Air Conditioner
-                                </h2>
-                            </a>
-                            <div class="pt-2">
-                                <span class="text-lg font-bold text-gray-900">Rs. 94,435</span>
-                                <span class="text-xs text-gray-400 line-through ml-2">Rs. 1,11,100</span>
-                            </div>
-                        </div>
-
-                        <button class="w-full mt-4 bg-gray-50 text-gray-600 py-2 rounded-xl text-xs font-bold hover:bg-orange-600 hover:text-white transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                    <div class="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-md transition-all group relative">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">
-                            15% OFF
-                        </div>
-                        
-                        <a href="#" class="block aspect-square mb-4 overflow-hidden rounded-xl bg-gray-50">
-                           <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
-                     alt="Product" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </a>
-
-                        <div class="space-y-1">
-                            <p class="text-orange-600 text-[10px] font-bold uppercase tracking-widest">AKL</p>
-                            <a href="#" class="block">
-                                <h2 class="text-sm font-semibold text-gray-800 line-clamp-2 hover:text-orange-600 transition-colors leading-snug">
-                                    AKL 1.5 Ton Inverter with Wi-Fi Air Conditioner
-                                </h2>
-                            </a>
-                            <div class="pt-2">
-                                <span class="text-lg font-bold text-gray-900">Rs. 94,435</span>
-                                <span class="text-xs text-gray-400 line-through ml-2">Rs. 1,11,100</span>
-                            </div>
-                        </div>
-
-                        <button class="w-full mt-4 bg-gray-50 text-gray-600 py-2 rounded-xl text-xs font-bold hover:bg-orange-600 hover:text-white transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                    <div class="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-md transition-all group relative">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">
-                            15% OFF
-                        </div>
-                        
-                        <a href="#" class="block aspect-square mb-4 overflow-hidden rounded-xl bg-gray-50">
-                           <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
-                     alt="Product" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </a>
-
-                        <div class="space-y-1">
-                            <p class="text-orange-600 text-[10px] font-bold uppercase tracking-widest">AKL</p>
-                            <a href="#" class="block">
-                                <h2 class="text-sm font-semibold text-gray-800 line-clamp-2 hover:text-orange-600 transition-colors leading-snug">
-                                    AKL 1.5 Ton Inverter with Wi-Fi Air Conditioner
-                                </h2>
-                            </a>
-                            <div class="pt-2">
-                                <span class="text-lg font-bold text-gray-900">Rs. 94,435</span>
-                                <span class="text-xs text-gray-400 line-through ml-2">Rs. 1,11,100</span>
-                            </div>
-                        </div>
-
-                        <button class="w-full mt-4 bg-gray-50 text-gray-600 py-2 rounded-xl text-xs font-bold hover:bg-orange-600 hover:text-white transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                    <div class="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-md transition-all group relative">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">
-                            15% OFF
-                        </div>
-                        
-                        <a href="#" class="block aspect-square mb-4 overflow-hidden rounded-xl bg-gray-50">
-                           <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=200" 
-                     alt="Product" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </a>
-
-                        <div class="space-y-1">
-                            <p class="text-orange-600 text-[10px] font-bold uppercase tracking-widest">AKL</p>
-                            <a href="#" class="block">
-                                <h2 class="text-sm font-semibold text-gray-800 line-clamp-2 hover:text-orange-600 transition-colors leading-snug">
-                                    AKL 1.5 Ton Inverter with Wi-Fi Air Conditioner
-                                </h2>
-                            </a>
-                            <div class="pt-2">
-                                <span class="text-lg font-bold text-gray-900">Rs. 94,435</span>
-                                <span class="text-xs text-gray-400 line-through ml-2">Rs. 1,11,100</span>
-                            </div>
-                        </div>
-
-                        <button class="w-full mt-4 bg-gray-50 text-gray-600 py-2 rounded-xl text-xs font-bold hover:bg-orange-600 hover:text-white transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
                     <div class="bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-md transition-all group relative">
                         <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">
                             15% OFF
@@ -586,14 +486,9 @@
             </main>
         </div>
 
-    
-   
-
-
 <script>
     function scrollProducts(direction) {
         const container = document.getElementById('product-scroll');
-        // On desktop, we scroll by the width of one item to keep it precise
         const itemWidth = container.firstElementChild.offsetWidth + 16; // width + gap
         container.scrollBy({
             left: direction * itemWidth,
@@ -604,10 +499,6 @@
 
 </section>
 
-
-
-
-
 <script>
     // --- Gallery Logic ---
     const mainImg = document.getElementById('mainImage');
@@ -615,17 +506,13 @@
 
     thumbnails.forEach(thumb => {
         thumb.addEventListener('click', function() {
-            // Get clicked image src
             const newSrc = this.querySelector('img').getAttribute('src');
-            
-            // Add a quick fade out/in effect
             mainImg.style.opacity = '0';
             setTimeout(() => {
                 mainImg.src = newSrc;
                 mainImg.style.opacity = '1';
             }, 150);
 
-            // Update thumbnail borders
             thumbnails.forEach(t => t.classList.replace('border-[#1e73be]', 'border-gray-200'));
             this.classList.replace('border-gray-200', 'border-[#1e73be]');
         });
@@ -633,16 +520,12 @@
 
     // --- Tab Switching Logic ---
     function switchTab(event, tabId) {
-        // 1. Hide all tab panes
         document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
-        
-        // 2. Remove active styles from all buttons
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.remove('border-[#1e73be]', 'text-[#1e73be]');
             btn.classList.add('border-transparent', 'text-gray-400');
         });
 
-        // 3. Show clicked tab and highlight button
         document.getElementById(tabId).classList.remove('hidden');
         event.currentTarget.classList.remove('border-transparent', 'text-gray-400');
         event.currentTarget.classList.add('border-[#1e73be]', 'text-[#1e73be]');
@@ -650,20 +533,6 @@
 </script>
 
     </section>
-
- 
-
-
-
-
-
-
-
-  
-
-
-  
-
 
     <footer class="bg-[#1b8dcc] pt-16 pb-8 border-t">
        <div class="container mx-auto px-4">
@@ -732,8 +601,6 @@
             </div>
         </div>
 
-     
-
         <div class="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-wider">
             <p class="text-white/80">Copyright © 2017-2025 ACGHAR.COM. All Rights Reserved.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
@@ -748,8 +615,6 @@
     </button>
     </footer>
 
-
-   
 <script>
     const menuBtn = document.getElementById('menu-btn');
     const closeMenu = document.getElementById('close-menu');
@@ -770,6 +635,28 @@
     mobileMenu.addEventListener('click', (e) => {
         if (e.target === mobileMenu) closeMenu.click();
     });
+
+    // NEW: HANDLES MOBILE DRAWER SLIDE-OUT INTERACTION OVERLAY LOGIC
+    function toggleFilterDrawer() {
+        const asideDrawer = document.getElementById('asideDrawer');
+        const filterOverlay = document.getElementById('filterOverlay');
+        
+        if (asideDrawer.classList.contains('-translate-x-full')) {
+            // Open Drawer
+            filterOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                filterOverlay.classList.remove('opacity-0');
+                asideDrawer.classList.remove('-translate-x-full');
+            }, 10);
+        } else {
+            // Close Drawer
+            asideDrawer.classList.add('-translate-x-full');
+            filterOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                filterOverlay.classList.add('hidden');
+            }, 300);
+        }
+    }
 </script>
 </body>
 </html>
