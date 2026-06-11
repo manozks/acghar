@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | AC GHAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <nav class="flex text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-8">
+            <a href="cart.html" class="hover:text-[#1e73be]">Cart</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-800">Checkout Process</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 items-start">
+            
+            <form class="space-y-6">
+                
+                <div class="bg-white rounded-[2rem] border border-gray-100 p-6 md:p-8 shadow-sm space-y-5">
+                    <h3 class="text-sm font-black text-gray-800 uppercase tracking-wider border-b border-gray-50 pb-3">Billing & Shipping Details</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">First Name *</label>
+                            <input type="text" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Last Name *</label>
+                            <input type="text" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                        </div>
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Street Address *</label>
+                        <input type="text" placeholder="House number and street name" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">City / Town *</label>
+                            <input type="text" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">District / State *</label>
+                            <select class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be] appearance-none cursor-pointer">
+                                <option>Kathmandu</option>
+                                <option>Lalitpur</option>
+                                <option>Bhaktapur</option>
+                                <option>Pokhara</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Phone Number *</label>
+                            <input type="tel" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Email Address *</label>
+                            <input type="email" required class="w-full bg-gray-50 rounded-xl px-4 py-3 text-xs font-semibold outline-none focus:ring-1 focus:ring-[#1e73be]">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] border border-gray-100 p-6 md:p-8 shadow-sm space-y-4">
+                    <h3 class="text-sm font-black text-gray-800 uppercase tracking-wider border-b border-gray-50 pb-3">Select Payment Method</h3>
+                    
+                    <label class="flex items-start gap-4 p-4 border border-gray-100 rounded-2xl bg-gray-50/50 cursor-pointer group hover:bg-white hover:border-blue-200 transition-all">
+                        <input type="radio" name="payment_method" checked class="mt-1 w-4 h-4 text-[#1e73be] focus:ring-[#1e73be]">
+                        <div>
+                            <span class="text-xs font-black uppercase tracking-wide text-gray-800 block mb-0.5">Cash on Delivery (COD)</span>
+                            <span class="text-xs text-gray-400 font-medium leading-relaxed block">Pay with cash upon delivery inside Kathmandu valley limits.</span>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start gap-4 p-4 border border-gray-100 rounded-2xl bg-gray-50/50 cursor-pointer group hover:bg-white hover:border-blue-200 transition-all">
+                        <input type="radio" name="payment_method" class="mt-1 w-4 h-4 text-[#1e73be] focus:ring-[#1e73be]">
+                        <div>
+                            <span class="text-xs font-black uppercase tracking-wide text-gray-800 block mb-0.5">Fonepay / eSewa / Khalti Digital</span>
+                            <span class="text-xs text-gray-400 font-medium leading-relaxed block">Scan QR Code instantly using mobile wallet architectures during gateway completion.</span>
+                        </div>
+                    </label>
+                </div>
+
+            </form>
+
+            <aside class="bg-gradient-to-br from-[#1e73be] to-[#0a549d] rounded-[2.5rem] p-6 md:p-8 text-white shadow-xl lg:sticky lg:top-36 space-y-6 w-full">
+                <h3 class="text-xs font-black uppercase tracking-wider border-b border-white/10 pb-3">Review Order</h3>
+                
+                <div class="space-y-4 max-h-48 overflow-y-auto pr-1 hide-scrollbar">
+                    <div class="flex justify-between items-center gap-4 text-xs">
+                        <span class="font-medium opacity-80 truncate uppercase tracking-wide">1.5 Ton Inverter AC <span class="font-black text-white ml-1">x1</span></span>
+                        <span class="font-bold flex-shrink-0">Rs. 125,000</span>
+                    </div>
+                    <div class="flex justify-between items-center gap-4 text-xs">
+                        <span class="font-medium opacity-80 truncate uppercase tracking-wide">Smart Air Purifier <span class="font-black text-white ml-1">x1</span></span>
+                        <span class="font-bold flex-shrink-0">Rs. 35,000</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-4 space-y-3 text-xs font-medium">
+                    <div class="flex justify-between items-center opacity-80">
+                        <span>Cart Subtotal</span>
+                        <span class="font-bold">Rs. 160,000</span>
+                    </div>
+                    <div class="flex justify-between items-center opacity-80">
+                        <span>Shipping Administration</span>
+                        <span class="font-black text-yellow-400 uppercase tracking-widest">FREE</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-4 flex justify-between items-baseline">
+                    <span class="text-xs font-black uppercase tracking-wider">Final Amount</span>
+                    <span class="text-2xl font-black text-white tracking-tight">Rs. 160,000</span>
+                </div>
+
+                <a href="thankyou.html" class="w-full mt-4 bg-white text-[#1e73be] font-black text-xs uppercase tracking-widest h-14 rounded-full hover:bg-red-600 hover:text-white transition-all flex items-center justify-center gap-2 shadow-2xl active:scale-95">
+                    Place Your Order <i class="fa-solid fa-lock text-[10px]"></i>
+                </a>
+            </aside>
+
+        </div>
+    </main>
+
+</body>
+</html>
